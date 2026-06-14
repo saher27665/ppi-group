@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>PPI Group | Head Office - Dubai - Beijing | International Trade & Commission Agents</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f8fc;
+      color: #1a2a3f;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --navy: #0B1E33;
+      --navy-light: #142c47;
+      --gold: #C6A43F;
+      --gold-dark: #a8892e;
+      --gray-bg: #F7F8FC;
+      --gray-card: #FFFFFF;
+      --gray-border: #E8ECF2;
+      --text-dark: #1a2a3f;
+      --text-muted: #4A5B6E;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* desktop padding */
+    @media (min-width: 992px) {
+      .container {
+        padding: 0 40px;
+      }
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.35);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 40px;
+      font-weight: 500;
+      transition: 0.25s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--navy);
+      border-color: white;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: white;
+      padding: 30px 0 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding: 40px 0 80px 0;
+      }
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+      padding-top: 15px;
+    }
+
+    @media (min-width: 768px) {
+      .navbar {
+        margin-bottom: 70px;
+        padding-top: 20px;
+      }
+    }
+
+    .logo h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: -0.5px;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    @media (min-width: 768px) {
+      .logo h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .logo p {
+      font-size: 0.6rem;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+
+    @media (min-width: 768px) {
+      .logo p {
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+      }
+    }
+
+    .contact-badge {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+      padding: 6px 16px;
+      border-radius: 60px;
+      font-size: 0.7rem;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      border: 0.5px solid rgba(255,255,255,0.2);
+    }
+
+    @media (min-width: 768px) {
+      .contact-badge {
+        padding: 8px 24px;
+        font-size: 0.85rem;
+        gap: 18px;
+      }
+    }
+
+    .contact-badge a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-badge a:hover {
+      color: var(--gold);
+    }
+
+    .hero-content {
+      max-width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .hero-content {
+        max-width: 700px;
+      }
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(198,164,63,0.18);
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      border-left: 2px solid var(--gold);
+    }
+
+    @media (min-width: 768px) {
+      .hero-tag {
+        padding: 5px 18px;
+        font-size: 0.75rem;
+        margin-bottom: 24px;
+      }
+    }
+
+    .hero-content h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .hero-content h1 {
+        font-size: 3.6rem;
+      }
+    }
+
+    .hero-content h1 span {
+      color: var(--gold);
+    }
+
+    .hero-desc {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-bottom: 24px;
+      max-width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .hero-desc {
+        font-size: 1.05rem;
+        margin-bottom: 36px;
+        max-width: 580px;
+      }
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 80px 0;
+      }
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 16px;
+      }
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      font-size: 0.85rem;
+      border-left: 3px solid var(--gold);
+      padding-left: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .section-subtitle {
+        margin-bottom: 48px;
+        font-size: 1rem;
+        padding-left: 16px;
+      }
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+    }
+
+    .premium-card {
+      background: var(--gray-card);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02), 0 0 0 1px var(--gray-border);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .premium-card {
+        padding: 28px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .premium-card {
+        padding: 36px;
+      }
+    }
+
+    .premium-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 35px -12px rgba(11, 30, 51, 0.12), 0 0 0 1px #e0e6ef;
+    }
+
+    .card-icon {
+      background: rgba(198, 164, 63, 0.1);
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .card-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 18px;
+        margin-bottom: 28px;
+      }
+    }
+
+    .card-icon i {
+      font-size: 24px;
+      color: var(--gold);
+    }
+
+    @media (min-width: 768px) {
+      .card-icon i {
+        font-size: 30px;
+      }
+    }
+
+    .premium-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--navy);
+    }
+
+    @media (min-width: 768px) {
+      .premium-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+    }
+
+    .office-tag {
+      display: inline-block;
+      background: rgba(198, 164, 63, 0.15);
+      color: var(--gold-dark);
+      font-size: 0.6rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+      width: fit-content;
+    }
+
+    @media (min-width: 768px) {
+      .office-tag {
+        font-size: 0.7rem;
+        padding: 4px 12px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    @media (min-width: 768px) {
+      .contact-line {
+        gap: 14px;
+        margin-bottom: 18px;
+        font-size: 0.9rem;
+      }
+    }
+
+    .contact-line i {
+      width: 20px;
+      color: var(--gold);
+      font-size: 0.85rem;
+    }
+
+    @media (min-width: 768px) {
+      .contact-line i {
+        width: 24px;
+        font-size: 1rem;
+      }
+    }
+
+    .contact-line a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      word-break: break-all;
+    }
+
+    .contact-line a:hover {
+      color: var(--gold);
+    }
+
+    .address-block {
+      background: #F8F9FD;
+      padding: 14px;
+      border-radius: 14px;
+      border-left: 3px solid var(--gold);
+      margin: 16px 0;
+    }
+
+    @media (min-width: 768px) {
+      .address-block {
+        padding: 20px;
+        border-radius: 18px;
+        margin: 20px 0;
+      }
+    }
+
+    .address-block p {
+      margin: 4px 0;
+      font-size: 0.7rem;
+      line-height: 1.4;
+    }
+
+    @media (min-width: 768px) {
+      .address-block p {
+        margin: 6px 0;
+        font-size: 0.85rem;
+      }
+    }
+
+    .map-premium {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      border: 1px solid var(--gray-border);
+    }
+
+    .map-preview {
+      background: #EFF2F8;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: var(--text-muted);
+      gap: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .map-preview {
+        height: 250px;
+        gap: 12px;
+      }
+    }
+
+    .map-preview i {
+      font-size: 36px;
+      color: var(--gold);
+      opacity: 0.6;
+    }
+
+    @media (min-width: 768px) {
+      .map-preview i {
+        font-size: 48px;
+      }
+    }
+
+    .map-links {
+      padding: 16px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+      .map-links {
+        padding: 24px 32px;
+        gap: 20px;
+        justify-content: space-between;
+      }
+    }
+
+    .map-links a {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    @media (min-width: 768px) {
+      .map-links a {
+        font-size: 0.9rem;
+        gap: 8px;
+      }
+    }
+
+    .footer {
+      background: var(--navy);
+      color: #bfcddd;
+      padding: 40px 0 25px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .footer {
+        padding: 60px 0 30px;
+      }
+    }
+
+    .footer h4 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer h4 {
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
+    }
+
+    .footer-links-grid {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-links-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+      }
+    }
+
+    .footer-col p {
+      margin-top: 10px;
+      font-size: 0.75rem;
+      max-width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .footer-col p {
+        margin-top: 12px;
+        font-size: 0.85rem;
+        max-width: 260px;
+      }
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 8px;
+      font-size: 0.75rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-col li {
+        margin-bottom: 12px;
+        font-size: 0.85rem;
+      }
+    }
+
+    .footer-col a {
+      color: #bfcddd;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--gold);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 25px;
+      margin-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.65rem;
+    }
+
+    @media (min-width: 768px) {
+      .copyright {
+        padding-top: 40px;
+        margin-top: 40px;
+        font-size: 0.75rem;
+      }
+    }
+
+    /* Button margin fix */
+    .premium-card .btn-primary {
+      margin-top: 10px;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.75rem;
+      padding: 10px 16px;
+    }
+
+    @media (min-width: 768px) {
+      .premium-card .btn-primary {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+      }
+    }
+
+    /* Fix for long words */
+    .contact-line span, .contact-line a {
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>PPI GROUP</h1>
+        <p>PAKISTAN PAKISTAN INTERNATIONAL</p>
+      </div>
+      <div class="contact-badge">
+        <span><i class="fas fa-envelope"></i> <a href="mailto:ppillcgroup.cn@hotmail.com">ppillcgroup.cn@hotmail.com</a></span>
+        <span><i class="fas fa-phone-alt"></i> <a href="tel:+861065910786">+86-10-65910786</a></span>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">IMPORT EXPORT & GENERAL TRADERS COMMISSION AGENT</div>
+      <h1>Global Trade & <br><span>Commission Agency</span><br>Worldwide Presence</h1>
+      <p class="hero-desc">Offices in Pakistan, UAE & China — providing professional import/export, general trading, and commission agency services across international markets.</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="#offices" class="btn-primary"><i class="fas fa-building"></i> Our Offices</a>
+        <a href="#contact-core" class="btn-outline"><i class="fas fa-envelope"></i> Contact Us</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Three Offices Section -->
+  <section id="offices">
+    <h2 class="section-title">Our Global Offices</h2>
+    <div class="section-subtitle">Strategically located to serve international trade & commerce</div>
+    <div class="grid-3">
+      
+      <!-- Card 1: HEAD OFFICE - Sialkot Pakistan -->
+      <div class="premium-card">
+        <div class="card-icon"><i class="fas fa-building"></i></div>
+        <span class="office-tag"><i class="fas fa-flag-checkered"></i> HEAD OFFICE · PAKISTAN</span>
+        <h3>Sialkot Office</h3>
+        <div class="contact-line"><i class="fas fa-location-dot"></i> <span>Daska Road Adda Industrial Zone, Sialkot PAKISTAN</span></div>
+        <div class="contact-line"><i class="fas fa-phone-alt"></i> <a href="tel:+92523512222">+92-523-512222</a></div>
+        <div class="contact-line"><i class="fas fa-fax"></i> <span>+92-523-514888</span></div>
+        <div class="contact-line"><i class="fas fa-envelope"></i> <a href="mailto:pipigroup@brain.net.pk">pipigroup@brain.net.pk</a></div>
+        <div class="address-block">
+          <p><i class="fas fa-industry"></i> <strong>Industrial Zone Location</strong><br>Daska Road Adda Industrial Zone, Sialkot — Pakistan's premier export hub</p>
+        </div>
+        <a href="mailto:pipigroup@brain.net.pk" class="btn-primary" style="background: var(--navy); color: white;"><i class="fas fa-paper-plane"></i> Email Head Office</a>
+      </div>
+
+      <!-- Card 2: DUBAI OFFICE - UAE -->
+      <div class="premium-card">
+        <div class="card-icon"><i class="fas fa-building"></i></div>
+        <span class="office-tag"><i class="fas fa-flag-checkered"></i> DUBAI OFFICE · UAE</span>
+        <h3>Dubai Office</h3>
+        <div class="contact-line"><i class="fas fa-location-dot"></i> <span>303, Kalantar Building, P.O Box 82048 101, Deira Dubai (U.A.E) Emirates</span></div>
+        <div class="contact-line"><i class="fas fa-phone-alt"></i> <a href="tel:+97142286786">+971-42286786</a></div>
+        <div class="contact-line"><i class="fas fa-fax"></i> <span>+971-42286785</span></div>
+        <div class="contact-line"><i class="fas fa-envelope"></i> <a href="mailto:pipigroup.uae@gmail.com">pipigroup.uae@gmail.com</a></div>
+        <div class="address-block">
+          <p><i class="fas fa-building"></i> <strong>Kalantar Building, Deira</strong><br>P.O Box 82048 101, Deira Dubai — Strategic trade hub for Middle East & Africa</p>
+        </div>
+        <a href="mailto:pipigroup.uae@gmail.com" class="btn-primary" style="background: var(--navy); color: white;"><i class="fas fa-paper-plane"></i> Email Dubai Office</a>
+      </div>
+
+      <!-- Card 3: BEIJING OFFICE - China -->
+      <div class="premium-card">
+        <div class="card-icon"><i class="fas fa-building"></i></div>
+        <span class="office-tag"><i class="fas fa-flag-checkered"></i> BEIJING OFFICE · CHINA</span>
+        <h3>Beijing Representative Office</h3>
+        <div class="contact-line"><i class="fas fa-location-dot"></i> <span>The Office A113 Hao jin yu Bldg, No.145 1st floor, Kang jia gou, Chaoyang district, Beijing</span></div>
+        <div class="contact-line"><i class="fas fa-phone-alt"></i> <a href="tel:+861065910786">+86-10-65910786</a></div>
+        <div class="contact-line"><i class="fas fa-envelope"></i> <a href="mailto:ppillcgroup.cn@hotmail.com">ppillcgroup.cn@hotmail.com</a></div>
+        <div class="contact-line"><i class="fas fa-envelope-open-text"></i> <a href="mailto:pipigroup.cn@hotmail.com">pipigroup.cn@hotmail.com</a></div>
+        <div class="address-block">
+          <p><i class="fas fa-building"></i> <strong>中文地址:</strong><br>北京市朝阳区康家沟145一号锦裕写字楼A座一层A113号</p>
+          <p><i class="fas fa-trademark"></i> Import Export & General Traders Commission Agent</p>
+        </div>
+        <a href="mailto:ppillcgroup.cn@hotmail.com" class="btn-primary" style="background: var(--navy); color: white;"><i class="fas fa-paper-plane"></i> Email Beijing Office</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Address Section -->
+  <section id="contact-core">
+    <h2 class="section-title">Official Contact & Representation</h2>
+    <div class="section-subtitle">Direct lines · Registered addresses</div>
+    <div class="grid-3">
+      <div class="premium-card">
+        <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
+        <h3>Call Us</h3>
+        <div class="contact-line"><i class="fas fa-phone"></i> Pakistan: <a href="tel:+92523512222">+92-523-512222</a></div>
+        <div class="contact-line"><i class="fas fa-phone"></i> Dubai: <a href="tel:+97142286786">+971-42286786</a></div>
+        <div class="contact-line"><i class="fas fa-phone"></i> China: <a href="tel:+861065910786">+86-10-65910786</a></div>
+        <div class="address-block">
+          <p><i class="fas fa-fax"></i> Fax numbers available at all offices</p>
+        </div>
+      </div>
+      <div class="premium-card">
+        <div class="card-icon"><i class="fas fa-envelope"></i></div>
+        <h3>Email Us</h3>
+        <div class="contact-line"><i class="fas fa-envelope"></i> Pakistan: <a href="mailto:pipigroup@brain.net.pk">pipigroup@brain.net.pk</a></div>
+        <div class="contact-line"><i class="fas fa-envelope"></i> Dubai: <a href="mailto:pipigroup.uae@gmail.com">pipigroup.uae@gmail.com</a></div>
+        <div class="contact-line"><i class="fas fa-envelope"></i> China: <a href="mailto:ppillcgroup.cn@hotmail.com">ppillcgroup.cn@hotmail.com</a></div>
+        <div class="address-block">
+          <p><i class="fas fa-clock"></i> Response within 24 hours</p>
+        </div>
+      </div>
+      <div class="premium-card">
+        <div class="card-icon"><i class="fas fa-handshake"></i></div>
+        <h3>Commission Agency Services</h3>
+        <ul style="margin-left: 18px; color: var(--text-muted); font-size: 0.75rem;">
+          <li style="margin-bottom: 6px;">✓ Buyer/Seller Representation</li>
+          <li style="margin-bottom: 6px;">✓ Quality Inspection & Audits</li>
+          <li style="margin-bottom: 6px;">✓ Logistics Coordination</li>
+          <li style="margin-bottom: 6px;">✓ Customs Clearance Support</li>
+          <li style="margin-bottom: 6px;">✓ Contract Negotiation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Map Section -->
+  <section id="office-address">
+    <h2 class="section-title">Office Locations</h2>
+    <div class="map-premium">
+      <div class="map-preview">
+        <i class="fas fa-map-marked-alt"></i>
+        <p><strong>Three Strategic Locations</strong> — Sialkot | Dubai | Beijing</p>
+        <p style="font-size: 0.7rem;">Serving global trade across Asia, Middle East & beyond</p>
+      </div>
+      <div class="map-links">
+        <a href="https://www.google.com/maps/search/?api=1&query=Sialkot+Pakistan+Daska+Road" target="_blank"><i class="fas fa-external-link-alt"></i> Head Office (Sialkot)</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Deira+Dubai+Kalantar+Building" target="_blank"><i class="fas fa-external-link-alt"></i> Dubai Office (Deira)</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=北京市朝阳区康家沟145号" target="_blank"><i class="fas fa-external-link-alt"></i> Beijing Office (Chaoyang)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section style="padding-top: 0;">
+    <div class="grid-3">
+      <div class="premium-card">
+        <div class="card-icon"><i class="fas fa-globe-asia"></i></div>
+        <h3>Global Trade Network</h3>
+        <p>As a licensed commission agent, we facilitate cross-border transactions between international buyers and manufacturers across Asia, Middle East, and global markets.</p>
+      </div>
+      <div class="premium-card">
+        <div class="card-icon"><i class="fas fa-certificate"></i></div>
+        <h3>Registered Entity</h3>
+        <p>Pakistan Pakistan International Co. — with Head Office in Sialkot, regional office in Dubai, and representative office in Beijing, China.</p>
+      </div>
+      <div class="premium-card">
+        <div class="card-icon"><i class="fas fa-envelope-open-dollar"></i></div>
+        <h3>Send Trade Inquiry</h3>
+        <p>For commission-based partnerships, sourcing requests, or import/export collaboration:</p>
+        <button onclick="window.location.href='mailto:ppillcgroup.cn@hotmail.com'" class="btn-primary" style="margin-top: 16px; background: var(--navy); color: white;"><i class="fas fa-paper-plane"></i> Email Us</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links-grid">
+      <div class="footer-col">
+        <h4>PPI GROUP</h4>
+        <p>Import Export & General Traders Commission Agent — offices in Pakistan, UAE & China.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#offices">Our Offices</a></li>
+          <li><a href="#contact-core">Contact Desk</a></li>
+          <li><a href="#office-address">Office Locations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Head Office</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Sialkot, Pakistan</li>
+          <li><i class="fas fa-phone"></i> <a href="tel:+92523512222" style="color:#bfcddd;">+92-523-512222</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><i class="far fa-envelope"></i> <a href="mailto:pipigroup@brain.net.pk" style="color:#bfcddd;">pipigroup@brain.net.pk</a></li>
+          <li><i class="far fa-envelope"></i> <a href="mailto:pipigroup.uae@gmail.com" style="color:#bfcddd;">pipigroup.uae@gmail.com</a></li>
+          <li><i class="far fa-envelope"></i> <a href="mailto:ppillcgroup.cn@hotmail.com" style="color:#bfcddd;">ppillcgroup.cn@hotmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2026 Pakistan Pakistan International (PPI) — Head Office: Sialkot, Pakistan | Dubai Office: Deira, UAE | Beijing Office: Chaoyang, China</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
